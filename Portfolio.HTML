@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayush Solanki | AI & Data Science Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: #f5f7fa;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: linear-gradient(135deg, #0078d7, #00b4db);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    header h1 {
+      font-size: 3rem;
+      animation: zoomIn 2s ease-in-out;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+    .typing {
+      border-right: 2px solid white;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      animation: typing 4s steps(40, end), blink 0.7s infinite;
+    }
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+    @keyframes zoomIn {
+      from { transform: scale(0.5); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    .btn {
+      background: white;
+      color: #0078d7;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn::after {
+      content: "";
+      position: absolute;
+      background: rgba(0,120,215,0.3);
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0;
+      transition: transform 0.5s, opacity 1s;
+    }
+    .btn:active::after {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+    section {
+      padding: 60px 20px;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease-in-out;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #0078d7;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+    ul li {
+      margin: 10px 0;
+      transition: color 0.3s;
+    }
+    ul li:hover {
+      color: #0078d7;
+      font-weight: 600;
+    }
+    .card {
+      background: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0,120,215,0.6);
+    }
+    footer {
+      background: #0078d7;
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Lottie Animation -->
+    <div id="lottie-hero" style="width:250px;height:250px;margin:auto;"></div>
+    <h1>Ayush Solanki</h1>
+    <p class="typing">AI & Data Science Student | Microsoft Student Ambassador</p><br>
+    <a href="#projects" class="btn">View Projects</a>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>B.Tech in Computer Science & Engineering (AI & Data Science) at SAGE University, Indore. Passionate about AI, Data Analytics, and innovation.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Python, HTML, CSS, JavaScript</li>
+      <li>Data Analytics, Power BI, Tableau</li>
+      <li>AI/ML Fundamentals, Communication, Team Leadership</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="card">
+      <h3>AI Student Mental Health Chatbot</h3>
+      <p>Hindi-language chatbot for college students — anonymous, 24/7 emotional support.</p>
+      <div id="lottie-project1" style="width:150px;height:150px;margin:auto;"></div>
+    </div>
+    <div class="card">
+      <h3>Deloitte Data Analytics Simulation</h3>
+      <p>Business insights and dashboards created during Deloitte Forage simulation.</p>
+      <div id="lottie-project2" style="width:150px;height:150px;margin:auto;"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Connect with me:</p>
+    <a href="https://linkedin.com/in/ayush-solanki-00a2b9392" target="_blank">LinkedIn</a>
+    <a href="mailto:ayush881550@gmail.com">Email</a>
+    <a href="https://github.com/ayush881550-cyber" target="_blank">GitHub</a>
+    <div id="lottie-footer" style="width:100px;height:100px;margin:auto;"></div>
+  </footer>
+
+  <!-- Lottie Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+  <script>
+    // Hero Animation
+    lottie.loadAnimation({
+      container: document.getElementById('lottie-hero'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'https://assets9.lottiefiles.com/packages/lf20_ai.json'
+    });
+
+    // Project 1 Animation
+    lottie.loadAnimation({
+      container: document.getElementById('lottie-project1'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'https://assets9.lottiefiles.com/packages/lf20_chatbot.json'
+    });
+
+    // Project 2 Animation
+    lottie.loadAnimation({
+      container: document.getElementById('lottie-project2'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'https://assets9.lottiefiles.com/packages/lf20_data.json'
+    });
+
+    // Footer Animation
+    lottie.loadAnimation({
+      container: document.getElementById('lottie-footer'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'https://assets9.lottiefiles.com/packages/lf20_linkedin.json'
+    });
+
+    // Scroll reveal effect
+    window.addEventListener('scroll', () => {
+      document.querySelectorAll('section').forEach(sec => {
+        const pos = sec.getBoundingClientRect().top;
+        if (pos < window.innerHeight - 100) {
+          sec.classList.add('visible');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
